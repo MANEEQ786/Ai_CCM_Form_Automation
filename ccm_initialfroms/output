@@ -1,0 +1,124 @@
+[
+  {
+    "title": "What is your preferred language for monthly assessment?",
+    "type": "Single choice",
+    "options": ["English", "Spanish"]
+  },
+  {
+    "title": "Diagnosis",
+    "type": "Diagnosis"
+  },
+
+  {
+    "title": "Do you have any of the following allergies?",
+    "type": "Multiple choice",
+    "options": [
+    "Penicillin",
+    "Sulfa (Sulfonamide Antibiotics)",
+    "Peanut",
+    "Soy",
+    "Shellfish",
+    "Milk",
+    "Eggs"
+        ]
+  },
+  
+  {
+    "title": "Please select the medications you are currently using:",
+    "type": "Multiple choice",
+    "options": [
+    "ALPRAZOLAM 0.25 MG TABLET",
+    "ATORVASTATIN CALCIUM 40 MG TABS",
+    "B-D NANO 2ND GEN PEN NDL 32GX4MMGRN",
+    "BENZONATATE 100 MG CAPSULE",
+    "CIPROFLOXACIN 500 MG TABLET",
+    "CLOTRIMAZOLE-BETAMETHASONE 1 %-0.05 % TOPICAL CREAM",
+    "ESCITALOPRAM 5 MG TABLET",
+    "FARXIGA 10 MG TABLET",
+    "GLIMEPIRIDE 2 MG TABS",
+    "LANTUS SOLOSTAR 100 UNIT/ML SUBCUTANEOUS SOLUTION PEN-INJECTOR",
+    "LANTUS SOLOSTAR PEN INJ 3ML LOSARTAN POTASSIUM 100 MG TABS",
+    "METFORMIN HCL 1000 MG ORAL TABLET",
+    "METOPROLOL SUCCINATE ER 50 MG TB24",
+    "PIOGLITAZONE HCL 15 MG ORAL TABLET",
+    "PRADAXA 150 MG CAPSULE",
+    "TAMSULOSIN HYDROCHLORIDE 0.4 MG CAPS"
+    ]
+  },
+  {
+    "title": "Do you require refill on any of the listed medications?",
+    "type": "Yes/No",
+    "options": ["Yes", "No"]
+  },
+  {
+    "title": "If YES, please mark the checkbox of the medication(s) shown below",
+    "type": "Checkbox",
+    "options": [
+      "EUTHYROX 112 MCG ORAL TABLET",
+      "FLONASE ALLERGY RELIEF 50 MCG/ACTUATION NASAL SPRAY"
+    ]
+  },
+  {
+    "title": "Please provide us with your updated Care Team information.",
+    "type": "Text box"
+  },
+  {
+    "title": "Please provide the names and contact information for any specialists you are currently seeing.",
+    "type": "Text box"
+  },
+  {
+    "title": "Have you had any recent hospitalizations or emergency visits? If any, please give details.",
+    "type": "Text box"
+  },
+  {
+    "title": "Do you have any document/image (Medications, Reports, Results, Vaccination) for record update? If any please upload.",
+    "type": "Upload Image"
+  },
+  {
+    "title": "How would you rate your overall health status?",
+    "type": "Single choice",
+    "options": ["Poor", "Fair", "Good", "Excellent"]
+  },
+  {
+    "title": "Are you experiencing any of these symptoms (non-emergency)?",
+    "type": "Multiple choice",
+    "options": [
+      "Constipation",
+      "Diarrhea",
+      "Fatigue",
+      "Dry Skin",
+      "Hair Loss",
+      "Cold Sensitivity",
+      "Heartburn",
+      "Abdominal Pain",
+      "None"
+    ]
+  },
+  {
+    "title": "What level of physical activity do you maintain?",
+    "type": "Single choice",
+    "options": ["High", "Moderate", "Low", "None"]
+  },
+  {
+    "title": "Do you require assistance with any of the following activities? Please check all that apply.",
+    "type": "Multiple choice",
+    "options": ["Bathing", "Dressing", "Feeding", "Mobility"]
+  },
+  {
+    "title": "What type of assistive device, if any, do you currently use? Please select one.",
+    "type": "Multiple choice",
+    "options": ["Cane", "Walker", "Wheelchair", "None"]
+  },
+  {
+    "title": "Have you experienced any falls recently? If yes, please give details.",
+    "type": "Text box"
+  },
+  {
+    "title": "What are your current personal health goals?",
+    "type": "Text box"
+  },
+  {
+    "title": "Do you have any ongoing health concerns or questions that you'd like to discuss with your healthcare provider?",
+    "type": "Text box"
+  }
+]

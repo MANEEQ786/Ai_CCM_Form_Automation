@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow-Up Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Follow-Up Form Generator</h1>
+        <div class="mb-3">
+            <label for="ptn_account" class="form-label">Patient Account Number</label>
+            <input type="text" id="ptn_account" class="form-control" placeholder="Enter Patient Account Number">
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+            <button id="generateButton" class="btn btn-primary">Generate Follow-Up Form</button>
+        </div>
+        <!-- Loader -->
+        <div id="loader" class="text-center" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <!-- Response Section -->
+        <div id="changediv" class="mt-3 d-none">
+            <h2>Generated Response</h2>
+            <textarea id="gen_ai_response" class="form-control" rows="15" readonly></textarea>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#generateButton').click(function () {
+                // Show loader
+                $('#loader').show();
+
+                // Hide the div with encounters initially
+                $('#changediv').addClass('d-none');
+
+                var patient_account = $('#ptn_account').val();
+
+                if (patient_account) {
+                    $.ajax({
+                        url: '/get_followup_form/',  // Python endpoint
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            patient_account: patient_account
+                        },
+                        success: function (response) {
+                            console.log(response);  // Log response to check if data is coming back
+                            if (response) {
+                                // Format JSON response to a pretty-printed string
+                                const formattedResponse = JSON.stringify(response.response, null, 4);
+
+                                // Set the formatted response in the textarea
+                                $('#gen_ai_response').val(formattedResponse);
+                                $('#changediv').removeClass('d-none');
+                            } else {
+                                $('#gen_ai_response').val("No Data Found");
+                                $('#changediv').removeClass('d-none');
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            window.alert("NO DATA FOUND !");
+                        },
+                        complete: function () {
+                            // Hide loader when the request is completed
+                            $('#loader').hide();
+                        }
+                    });
+                } else {
+                    window.alert("Please enter a valid patient account number");
+                    $('#loader').hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
