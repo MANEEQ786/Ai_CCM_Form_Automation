@@ -32,8 +32,7 @@ error_logger = logging.getLogger('api_error')
 
 # Initialize Vertex AI
 try:
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "config/aiml-365220-b6aec5dba4a2.json"
-    vertexai.init(project="aiml-365220", location="us-central1")
+    
     model = GenerativeModel("gemini-2.0-flash")
     info_logger.info("Vertex AI initialized successfully")
 except Exception as e:
