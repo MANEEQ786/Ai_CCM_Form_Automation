@@ -10,14 +10,7 @@ from ..utils.custom_exception import ApplicationException
 info_logger = logging.getLogger('api_info')
 error_logger = logging.getLogger('api_error')
 
-load_dotenv()
 
-DB_HOST ='10.10.30.173'
-DB_USER = 'ai_web'
-DB_NAME = 'mis_db'
-DB_PASSWORD = 'gAAAAABnCAkEgEEwjSINHVHA0eeeuGeNAUrXntiltDkS1G8kBPRrDr0hUFZ4bZSsoZa85UW7IOJAn8juLVesmbCy2780cJjYXw=='
-WKEY = 'bJgIjMuxn_sQQzCXY3TItPy1Wy43586on7DqR6R5O9A='
-DB_PASSWORD = get_password(DB_PASSWORD,WKEY)
 
 
 
